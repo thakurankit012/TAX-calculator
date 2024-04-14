@@ -1,0 +1,219 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Light Mode Styles */
+:root {
+  --bg-color: #f6f8fa;
+  --text-color: #24292e;
+  --input-border: #d1d5da;
+  --input-focus: #0361cc;
+  --error-color: #e36209;
+  --primary-color: #0361cc;
+  --primary-hover: #024ea6;
+  --secondary-color: #f6f8fa;
+  --secondary-hover: #e1e4e8;
+  --modal-bg: #fff;
+  --modal-text: #24292e;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  --bg-color: #1b1f23;
+  --text-color: #f6f8fa;
+  --input-border: #444d56;
+  --input-focus: #4d7ef0;
+  --error-color: #f36d26;
+  --primary-color: #4d7ef0;
+  --primary-hover: #3568d1;
+  --secondary-color: #2b3137;
+  --secondary-hover: #3b4349;
+  --modal-bg: #2b3137;
+  --modal-text: #f6f8fa;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 600px;
+  padding: 40px;
+  background-color: var(--modal-bg);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 a.github-icon {
+  font-size: 2rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+h1 a.github-icon:hover {
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.form-control {
+  font-size: 1rem;
+  padding: 12px 16px;
+  border: 2px solid var(--input-border);
+  border-radius: 8px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--input-focus);
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  color: var(--error-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.error-icon {
+  color: red; /* Set the default color for error icons */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.error-icon.d-none {
+  display: none; /* Hide error icons by default */
+}
+
+.btn-primary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: var(--modal-bg);
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--modal-text);
+  margin-bottom: 20px;
+}
+
+.modal-body p {
+  font-size: 1.2rem;
+  color: var(--modal-text);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode-toggle i {
+  margin-right: 8px;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+}

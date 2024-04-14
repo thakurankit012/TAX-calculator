@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fyle Tax Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tax Calculator <a href="" target="_blank" class="github-icon"><i class="fab fa-github"></i></a></h1>
+    <form id="taxCalculatorForm">
+      <div class="form-group">
+        <label for="grossAnnualIncome">Gross Annual Income</label>
+        <div class="input-group">
+          <input type="number" class="form-control" id="grossAnnualIncome" placeholder="Enter Gross Annual Income" required>
+          <div class="input-group-append">
+            <span class="input-group-text error-icon d-none" id="grossAnnualIncomeError" data-toggle="tooltip" title="Please enter a valid number.">!</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="extraIncome">Extra Income</label>
+        <div class="input-group">
+          <input type="number" class="form-control" id="extraIncome" placeholder="Enter Extra Income" required>
+          <div class="input-group-append">
+            <span class="input-group-text error-icon d-none" id="extraIncomeError" data-toggle="tooltip" title="Please enter a valid number.">!</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="deductions">Deductions</label>
+        <div class="input-group">
+          <input type="number" class="form-control" id="deductions" placeholder="Enter Deductions" required>
+          <div class="input-group-append">
+            <span class="input-group-text error-icon d-none" id="deductionsError" data-toggle="tooltip" title="Please enter a valid number.">!</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <select class="form-control" id="age" required>
+          <option value="">Select Age</option>
+          <option value="under40">Under 40</option>
+          <option value="between40and60">Between 40 and 60</option>
+          <option value="over60">60 and above</option>
+        </select>
+        <div class="input-group-append error-icon" id="grossAnnualIncomeError">
+            <span class="input-group-text d-none" data-toggle="tooltip" title="Please enter a valid number.">!</span>
+          </div>          
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Calculate Tax</button>
+    </form>
+  </div>
+
+  <button id="darkModeToggle" class="dark-mode-toggle">
+    <i class="fas fa-moon"></i> Dark Mode
+  </button>
+
+  <div class="modal fade" id="taxResultModal" tabindex="-1" role="dialog" aria-labelledby="taxResultModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="taxResultModalLabel">Tax Calculation Result</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Your estimated tax is: <span id="taxResult"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
