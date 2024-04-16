@@ -1,10 +1,9 @@
 $(document).ready(function() {
-    // Add event listeners to the input fields
+   
     $('#grossAnnualIncome, #extraIncome, #deductions').on('input', validateInput);
     $('#age').on('change', validateInput);
     $('#taxCalculatorForm').on('submit', calculateTax);
 
-    // Initially hide all error icons
     $('.error-icon').addClass('d-none');
 
     function validateInput() {
