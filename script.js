@@ -7,7 +7,7 @@ $(document).ready(function() {
     $('.error-icon').addClass('d-none');
 
     function validateInput() {
-      // Validate each input field and display the error icon if necessary
+      
       validateField('grossAnnualIncome', 'grossAnnualIncomeError');
       validateField('extraIncome', 'extraIncomeError');
       validateField('deductions', 'deductionsError');
