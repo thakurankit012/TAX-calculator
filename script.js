@@ -21,7 +21,7 @@ $(document).ready(function() {
       if (isNaN(fieldValue) || fieldValue < 0 || fieldValue === '') {
         errorIcon.removeClass('d-none'); 
       } else {
-        errorIcon.addClass('d-none'); // Otherwise, hide error icon
+        errorIcon.addClass('d-none'); 
       }
     }
 
