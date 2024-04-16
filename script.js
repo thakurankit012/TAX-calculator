@@ -30,7 +30,7 @@ $(document).ready(function() {
       const errorIcon = $('#' + errorId);
 
       if (ageValue === '') {
-        errorIcon.removeClass('d-none'); // Show error icon if there's an error
+        errorIcon.removeClass('d-none'); 
       } else {
         errorIcon.addClass('d-none'); // Otherwise, hide error icon
       }
