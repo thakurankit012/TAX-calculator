@@ -1,4 +1,4 @@
-/* Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* Light Mode Styles */
@@ -112,13 +112,13 @@ label {
 }
 
 .error-icon {
-  color: red; /* Set the default color for error icons */
+  color: red; 
   font-size: 1.2rem;
   font-weight: 600;
 }
 
 .error-icon.d-none {
-  display: none; /* Hide error icons by default */
+  display: none; 
 }
 
 .btn-primary,
