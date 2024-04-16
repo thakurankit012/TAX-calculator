@@ -32,14 +32,14 @@ $(document).ready(function() {
       if (ageValue === '') {
         errorIcon.removeClass('d-none'); 
       } else {
-        errorIcon.addClass('d-none'); // Otherwise, hide error icon
+        errorIcon.addClass('d-none'); 
       }
     }
 
     function calculateTax(event) {
       event.preventDefault();
 
-      // Retrieve the input values
+      
       const grossAnnualIncome = parseFloat($('#grossAnnualIncome').val());
       const extraIncome = parseFloat($('#extraIncome').val());
       const deductions = parseFloat($('#deductions').val());
