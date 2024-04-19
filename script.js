@@ -66,7 +66,7 @@ $(document).ready(function() {
         }
       }
 
-      // Display the tax result in the modal
+     
       $('#taxResult').text(tax.toFixed(2) + ' Lakhs');
       $('#taxResultModal').modal('show');
     }
